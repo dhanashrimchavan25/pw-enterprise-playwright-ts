@@ -1,0 +1,48 @@
+{
+  "name": "playwright-enterprise-framework",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Enterprise Playwright framework with separate API and E2E test layers, shared models, data, and helpers.",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "test": "playwright test",
+    "test:api": "playwright test --project=api",
+    "test:e2e": "playwright test --project=e2e",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:dev": "cross-env ENV=dev playwright test",
+    "test:qa": "cross-env ENV=qa playwright test",
+    "test:staging": "cross-env ENV=staging playwright test",
+    "test:prod": "cross-env ENV=prod playwright test",
+    "test:report:allure": "cross-env REPORT_TYPE=allure playwright test",
+    "test:report:executive": "cross-env REPORT_TYPE=executive playwright test",
+    "test:report:all": "cross-env REPORT_TYPE=all playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report reports/playwright-report",
+    "report:clean": "tsx scripts/clean-reports.ts",
+    "report:allure:generate": "tsx scripts/allure-cli.ts generate",
+    "report:allure": "tsx scripts/allure-cli.ts open"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^22.13.5",
+    "allure-commandline": "^2.34.0",
+    "cross-env": "^7.0.3",
+    "tsx": "^4.20.3",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.9.0",
+    "typescript-eslint": "^8.0.0"
+  },
+  "dependencies": {
+    "allure-playwright": "^3.3.3",
+    "dotenv": "^16.6.1",
+    "winston": "^3.18.3"
+  }
+}
