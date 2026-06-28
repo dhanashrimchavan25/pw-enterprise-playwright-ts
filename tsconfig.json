@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "paths": {
+      "@helpers/*": ["src/helpers/*"],
+      "@models/*": ["src/models/*"],
+      "@data/*": ["src/data/*"],
+      "@fixtures/*": ["fixtures/*"],
+      "@apitest/*": ["src/apitest/*"],
+      "@e2etest/*": ["src/e2etest/*"]
+    },
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "types": ["node", "@playwright/test"]
+  },
+  "include": ["./**/*.ts", "./**/*.json"],
+  "exclude": ["node_modules", "dist"]
+}

@@ -1,0 +1,11 @@
+{
+  "products": {
+    "backpack": "Sauce Labs Backpack"
+  },
+  "expectedProductCount": 6,
+  "sortExpectations": {
+    "lohi": {
+      "firstProduct": "Sauce Labs Onesie"
+    }
+  }
+}
